@@ -9,6 +9,6 @@ int main(){
     int b;
     scanf("%d",&b);
 
-    printf("A téglalap kerülete: %d", 2*(a+b));
-    printf("A téglalap területe: %d", a*b);
+    printf("A téglalap kerülete: %d\n", 2*(a+b));
+    printf("A téglalap területe: %d\n", a*b);
 }
