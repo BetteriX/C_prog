@@ -18,4 +18,6 @@ int main(){
     scanf("%d", &a);
 
     printf("A szam: %d\n",a);
+
+    return 0;
 }

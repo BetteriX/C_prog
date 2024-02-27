@@ -5,4 +5,5 @@ int main(){
         printf("Zsolt\n");
     }
     
+    return 0;
 }

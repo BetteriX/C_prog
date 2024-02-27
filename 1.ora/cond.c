@@ -12,4 +12,5 @@ int main(){
         printf("A szám páratlan\n");
     }
 
+    return 0;
 }

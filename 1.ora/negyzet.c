@@ -7,4 +7,6 @@ int main(){
 
     printf("A szam: %d\n", a*a);
     printf("A negyzet kerülete: %d\n", 4*a);
+
+    return 0;
 }

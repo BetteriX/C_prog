@@ -11,4 +11,6 @@ int main(){
 
     printf("A téglalap kerülete: %d\n", 2*(a+b));
     printf("A téglalap területe: %d\n", a*b);
+
+    return 0;
 }
