@@ -1,6 +1,8 @@
 #include <stdio.h>
 
 int main() {
+    // https://arato.inf.unideb.hu/szathmary.laszlo/pmwiki/index.php?n=Prog1.20200220a
+    // Házi
     printf("n: ");
     int n;
     scanf("%d", &n);
@@ -19,4 +21,6 @@ int main() {
         printf("%d\n", i);
     }
     */
+
+   return 0;
 }

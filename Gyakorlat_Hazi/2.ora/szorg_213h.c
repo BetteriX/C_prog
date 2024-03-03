@@ -13,5 +13,5 @@ int main(){
 
     printf("%d\n", ossz);
 
-    return ossz;
+    return 0;
 }
