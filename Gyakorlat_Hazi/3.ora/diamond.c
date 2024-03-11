@@ -16,20 +16,19 @@ int main(){
     printf("\n");
 
     int fordul = 0;
-    int bal_szokoz = magassag/2;
-    int jobb_szokoz = magassag/2;
+    int szokoz = magassag/2;
     int csillag = 1;
 
     for(int i = 1; i <= magassag; i++){
 
         if(fordul == 0){
-            if(bal_szokoz == 0 || jobb_szokoz == 0){
+            if(szokoz == 0){
                 fordul = 1;
             }
         }
 
         if(fordul == 1){
-            for(int b = 1; b <= bal_szokoz; b++){
+            for(int b = 1; b <= szokoz; b++){
                 printf(" ");
             }
 
@@ -37,19 +36,18 @@ int main(){
                 printf("*");
             }
 
-            for(int j = 1; j <= jobb_szokoz; j++){
+            for(int j = 1; j <= szokoz; j++){
                 printf(" ");
             }
 
-            bal_szokoz++;
-            jobb_szokoz++;
+            szokoz++;
             csillag -= 2;
 
             printf("\n");
         }
 
         if(fordul == 0){
-            for(int b = 1; b <= bal_szokoz; b++){
+            for(int b = 1; b <= szokoz; b++){
                 printf(" ");
             }
 
@@ -57,12 +55,11 @@ int main(){
                 printf("*");
             }
 
-            for(int j = 1; j <= jobb_szokoz; j++){
+            for(int j = 1; j <= szokoz; j++){
                 printf(" ");
             }
 
-            bal_szokoz--;
-            jobb_szokoz--;
+            szokoz--;
             csillag += 2;
 
             printf("\n");
