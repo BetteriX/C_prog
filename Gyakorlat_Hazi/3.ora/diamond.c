@@ -35,10 +35,12 @@ int main(){
             for(int cs = 1; cs <= csillag; cs++){
                 printf("*");
             }
-
+            
+            /*
             for(int j = 1; j <= szokoz; j++){
                 printf(" ");
             }
+            */
 
             szokoz++;
             csillag -= 2;
@@ -54,10 +56,11 @@ int main(){
             for(int cs = 1; cs <= csillag; cs++){
                 printf("*");
             }
-
+            /*
             for(int j = 1; j <= szokoz; j++){
                 printf(" ");
             }
+            */
 
             szokoz--;
             csillag += 2;
