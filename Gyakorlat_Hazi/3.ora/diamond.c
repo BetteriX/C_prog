@@ -12,6 +12,10 @@ int main(){
         printf("A magassag nem lehet páros!\n");
         return 1;
     }
+    else if(magassag <= 0){
+        printf("A magasság nem lehet negatív!\n");
+        return 1;
+    }
     
     printf("\n");
 
