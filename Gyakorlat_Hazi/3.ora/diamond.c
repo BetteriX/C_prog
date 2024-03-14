@@ -9,7 +9,7 @@ int main(){
     scanf("%d", &magassag);
 
     if(magassag % 2 == 0){
-        printf("A magassag nem lehet páros!\n");
+        printf("A magasság nem lehet páros!\n");
         return 1;
     }
     else if(magassag <= 0){
