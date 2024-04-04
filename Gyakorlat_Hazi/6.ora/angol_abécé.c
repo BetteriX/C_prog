@@ -19,13 +19,6 @@ string feltolt_sztring() {
 
 
 int main(){
-    /*
-    char abece[SIZE];
-    feltolt(SIZE, abece);
-    for(int i = 0; i < SIZE; i++){
-        printf("%c , ", abece[i]);
-    }
-    */
     string abc = feltolt_sztring();
 
     printf("%s\n", abc);
