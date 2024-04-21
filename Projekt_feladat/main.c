@@ -27,7 +27,7 @@ void file_c(){
     FILE *file = fopen(file_name, "r");
     if (file != NULL) {
         fclose(file);
-        printf("A fájl már létezik.\n");
+        printf("The file doesn't exists.\n");
     } else {
         file = fopen(file_name, "w");
         if (file != NULL) {
@@ -42,7 +42,7 @@ void file_sh(){
     FILE *file = fopen(file_name, "r");
     if (file != NULL) {
         fclose(file);
-        printf("A fájl már létezik.\n");
+        printf("The file doesn't exists.\n");
     } else {
         file = fopen(file_name, "w");
         if (file != NULL) {
@@ -57,7 +57,7 @@ void file_cs(){
     FILE *file = fopen(file_name, "r");
     if (file != NULL) {
         fclose(file);
-        printf("A fájl már létezik.\n");
+        printf("The file doesn't exists.\n");
     } else {
         file = fopen(file_name, "w");
         if (file != NULL) {
@@ -72,7 +72,7 @@ void file_py(){
     FILE *file = fopen(file_name, "r");
     if (file != NULL) {
         fclose(file);
-        printf("A fájl már létezik.\n");
+        printf("The file doesn't exists.\n");
     } else {
         file = fopen(file_name, "w");
         if (file != NULL) {
@@ -122,6 +122,10 @@ int main(int argc, char* const argv[]){
 
             return 0;
         }
+
+        printf("The argument isn't correct.\n");
+
+        return 1;
     }
     else if(argc == 3){
         if(strcmp(argv[2], "--stdout")==0){
@@ -129,27 +133,26 @@ int main(int argc, char* const argv[]){
                 printf("#include <stdio.h>\n\nint main() {\n\tprintf(\"Hello, World!\\n\");\n\treturn 0;\n}\n");
 
             return 0;
-        }
-        if(strcmp(argv[1], "sh")==0){
-            printf("#!/bin/bash\n\necho \"Hello, World!\"\n");
+            }
+            if(strcmp(argv[1], "sh")==0){
+                printf("#!/bin/bash\n\necho \"Hello, World!\"\n");
 
-            return 0;
-        }
-        if(strcmp(argv[1], "cs")==0){
-            printf("using System;\n\nclass HelloWorld\n{\n\tstatic void Main() {\n\t\tConsole.WriteLine(\"Hello, World!\");\n\t}\n}\n");
+                return 0;
+            }
+            if(strcmp(argv[1], "cs")==0){
+                printf("using System;\n\nclass HelloWorld\n{\n\tstatic void Main() {\n\t\tConsole.WriteLine(\"Hello, World!\");\n\t}\n}\n");
 
-            return 0;
-        }
-        if(strcmp(argv[1], "py")==0){
-            printf("#!/bin/bash\n\necho \"Hello, World!\"\n");
+                return 0;
+            }
+            if(strcmp(argv[1], "py")==0){
+                printf("#!/bin/bash\n\necho \"Hello, World!\"\n");
 
-            return 0;
+                return 0;
+            }
         }
-        }
-        else{
-            printf("the optional command is --stdout\n");
-            return 1; 
-        }
+        
+        printf("the optional command in the second argument is --stdout or in the first argument isn't right.\n");
+        return 1; 
     }
     else{
         printf("Too many arguments...\n");
