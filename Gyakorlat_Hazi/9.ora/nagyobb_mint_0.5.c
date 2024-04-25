@@ -10,8 +10,7 @@
 int main(){
     char szam[1024];
 
-    FILE *fp_r = fopen("in.txt", "r");
-    FILE *fp_w = fopen("out.txt", "w");
+    FILE *fp_r = fopen("in.txt", "r"); 
 
     if(fp_r != NULL){
         printf("# in.txt sikeresen megnyitva\n");
@@ -22,7 +21,7 @@ int main(){
     }
 
     printf("# 0,5-nél nagyobb számok szűrése...\n");
-
+    FILE *fp_w = fopen("out.txt", "w");
     int szam_nagyobb = 0;
     while(fgets(szam, MAX, fp_r)!=NULL){
         if(atof(szam) > 0.5){

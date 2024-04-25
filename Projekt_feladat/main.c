@@ -145,7 +145,7 @@ int main(int argc, char* const argv[]){
                 return 0;
             }
             if(strcmp(argv[1], "py")==0){
-                printf("#!/bin/bash\n\necho \"Hello, World!\"\n");
+                printf("print(\"Hello, World!\")\n");
 
                 return 0;
             }

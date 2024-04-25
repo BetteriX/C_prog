@@ -18,11 +18,14 @@ int main(){
             
         int kettes = 1;
         int decimal = 0;
-
+        //index        0123 
+        //binaris[3] = 1100
         for(int i = hossz-1; i >= 0; i--){
             if(binaris[i] == '1'){
                     decimal += kettes;
                 }
+            //for testing
+            //printf("binaris[%d]=%c\n",i,binaris[i]);
         kettes *= 2;
         }
         if(max_decimal < decimal){
