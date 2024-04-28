@@ -19,7 +19,7 @@ void mem_error_exit(){
     exit(1);
 }
 
-int da_sum(const DynArray *self){
+double da_sum(const DynArray *self){
     int sum = 0;
     int hossz = self->length;
 
