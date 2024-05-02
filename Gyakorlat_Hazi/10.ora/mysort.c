@@ -1,3 +1,6 @@
+// https://arato.inf.unideb.hu/szathmary.laszlo/pmwiki/index.php?n=Prog1.20200416h
+// 20200416h
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,6 +45,7 @@ int main(int argc, char* argv[]){
         array[hossz] = atoi(sor);
         hossz++;
     }
+    fclose(fp);
 
     Sort(array, hossz);
 

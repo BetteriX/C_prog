@@ -1,3 +1,6 @@
+// https://arato.inf.unideb.hu/szathmary.laszlo/pmwiki/index.php?n=Prog1.20200411a
+// 20200411a
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
