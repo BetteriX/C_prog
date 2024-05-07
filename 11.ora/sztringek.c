@@ -31,7 +31,7 @@ int main(int argc, char const *argv[]){
     char *p = strfry(input);
     printf("%s", p);
     */
-
     
+   
     return 0;
 }
