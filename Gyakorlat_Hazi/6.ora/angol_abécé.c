@@ -13,7 +13,7 @@ string feltolt_sztring() {
     for(int i = 0; i < SIZE; i++){
         abece[i] = 'a' + i;
     }
-    abece[SIZE+1] = '\0';
+    abece[SIZE] = '\0';
     return abece;
 }
 

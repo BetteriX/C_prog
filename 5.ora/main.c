@@ -70,7 +70,7 @@ int contains_character(string s, char c){
     int i = 0;
     int j = strlen(s) - 1;
     while(i < j){
-        if(s[1] == c){
+        if(s[i] == c){
             return 1;
         }
         i++;
@@ -81,8 +81,12 @@ int contains_character(string s, char c){
 
 int main(){
     string a = "anna";
+
+    printf("%d", my_strlen(a));
+    /*
     printf("Palindrom-e az %s: %s\n", a, is_palindrome(a) ? "igen" : "nem" );
     printf("%d\n", find_char(a,'n'));
+    */
 
     /*
     char tomb[SIZE];

@@ -8,7 +8,7 @@ int main(int argc, char const *argv[]){
     FILE *fp = fopen("nevek.csv", "r");
 
     char sor[BUFFER];
-    char *p;
+    char* p;
     char* nev; 
     int kor;
     char* szak;
