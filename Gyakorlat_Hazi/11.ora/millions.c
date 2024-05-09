@@ -105,11 +105,10 @@ void quicksort(DynArray *self, int bal, int jobb)
 }
 
 void* da_clear(DynArray *self){
-    for (int i = 0; i < self->length; i++) {
-        free(&(self->elems[i]));
-    }
+    free(self->elems);
+    self->elems = (int*) malloc(INITIAL_CAPACITY * sizeof(int));
     self->length = 0;
-
+    self->capacity =INITIAL_CAPACITY;
 }
 
 int main(){
