@@ -104,11 +104,12 @@ void quicksort(DynArray *self, int bal, int jobb)
     if (i < jobb) quicksort(self, i, jobb);
 }
 
-void da_clear(DynArray *self){
+void* da_clear(DynArray *self){
     for (int i = 0; i < self->length; i++) {
         free(&(self->elems[i]));
     }
     self->length = 0;
+
 }
 
 int main(){
