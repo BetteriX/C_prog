@@ -9,6 +9,19 @@ typedef struct{
     char gyartas_eve[10];
 } Auto;
 
+void sort_name(int n, Auto* h){
+    for(int i = 0; i < n-1;i++){
+        for(int j = i+1; j < n; j++){
+            // Ha a karakterek nem egyeznek, meg ami ASCII táblázatban lévő értékei kisebbek mint a másiké akkor megcseréli azzokat
+            if(strcmp(h[i].marka,h[j].marka)>0){ 
+                Auto tmp = h[i];
+                h[i] = h[j];
+                h[j] = tmp;
+            }
+        }
+    }
+}
+
 int feltolt(const char* fname, const int n, Auto autok[]){
     FILE *fp = fopen(fname, "r");
 
@@ -26,12 +39,10 @@ int feltolt(const char* fname, const int n, Auto autok[]){
     char* tipus;
     char* gyartas_eve;
 
+    // Az első sort nem olvassa be
+    fgets(sor,n,fp);
+
     while(fgets(sor,n,fp)!=NULL){
-        // Skips the first line
-        if(index == 0){
-            index++;
-            continue;
-        }
         sor[strlen(sor)-1]='\0';
         p = strtok(sor, ",");
         marka = p;
@@ -56,13 +67,14 @@ int feltolt(const char* fname, const int n, Auto autok[]){
     return index;
 }
 
-void kiir_autok(Auto *h){
+void kiir_autok(Auto* h){
     printf("%s, %s, %s, %s\n", h->marka, h->nev, h->tipus, h->gyartas_eve);
 }
 
 int main(){
     Auto autok[100];
     int auto_szam = feltolt("marka.csv", 100, autok);
+    sort_name(auto_szam, autok);
 
     for(int i = 0; i < auto_szam; i++){
         kiir_autok(&autok[i]);
