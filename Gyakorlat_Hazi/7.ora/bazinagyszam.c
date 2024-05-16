@@ -14,7 +14,8 @@ int main(int argc, const char *argv[]){
 
     int sum = 0;
     for(int i = 0; szamok[i] != '\0'; i++){
-        sum += szamok[i] - '0'; // With (- '0') its converts into number    
+        //sum += szamok[i] - '0'; // With (- '0') its converts into number    
+        sum += atoi(&szamok[i]);
     }
 
     printf("\n");
