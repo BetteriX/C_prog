@@ -5,7 +5,7 @@ typedef char* string;
 void kiir(int sorok, int oszlopok, string matrix[sorok][oszlopok]){
    for(int sor = 0; sor < sorok; sor++){
         for(int oszlop = 0; oszlop < oszlopok; oszlop++){
-            printf("%d\t", matrix[sor][oszlop]);
+            printf("%s\t", matrix[sor][oszlop]);
         }
         printf("\n");   
     } 
@@ -23,20 +23,21 @@ int osszead(int sorok, int oszlopok, int matrix[sorok][oszlopok]){
 }
 
 void foatlo(int sorok, int oszlopok, string matrix[sorok][oszlopok]){
-    int space = 0;
-    for(int sor = 0; sor < sorok; sor++){
-        for(int oszlop = 5; oszlop > oszlopok; oszlop--){
-            if(sor == oszlop){
-                printf("%s\n", matrix[sor][oszlop]);
-                space++;
-            }
-        } 
-        for(int i = 0; i < space; i++){
-            printf(" ");
-        }
-    }
+    int sor = 0;
+    int oszlop = oszlopok;
 
-    printf("\n");
+    int tab = 1;
+    while(sor != sorok && oszlop != 0){
+        printf("%s\n", matrix[sor][oszlop]);
+
+        for(int i = 0; i < tab; i++){
+            printf("\t");
+        }
+        tab++;
+
+        sor++;
+        oszlop--;
+    }
 }
 
 int main(int argc, char const *argv[]){
@@ -55,10 +56,13 @@ int main(int argc, char const *argv[]){
     string matrix[6][6] = {
         {"aa","bb","cc","dd","ee","ff"},
         {"aa","bb","cc","dd","ee","ff"},
+        {"aa","bb","cc","dd","ee","ff"},
+        {"aa","bb","cc","dd","ee","ff"},
+        {"aa","bb","cc","dd","ee","ff"},
         {"aa","bb","cc","dd","ee","ff"}
     };
 
-    //kiir(sorok, oszlopok, matrix);
+    kiir(sorok, oszlopok, matrix);
     foatlo(sorok, oszlopok, matrix);
 
     return 0;

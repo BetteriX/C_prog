@@ -18,6 +18,7 @@ void capitalize(char text[]){
 
 void lowercase(char text[]){
     int hossz = strlen(text);
+
     if(hossz > 0){
         for(int i = 0; i < hossz; i++){
             text[i] = tolower(text[i]);
@@ -44,6 +45,7 @@ int feltolt(const char* fname, const int n, Hallgato tomb[]){
 
     char sor[n];
     char* p;
+
     char* nev;
     int kor;
     char* szak;
@@ -77,6 +79,7 @@ void kiir_hallgato(Hallgato *h){
 int kiszur_ptisek(const int n, Hallgato tomb[], Hallgato ptisek[]){
     int index = 0;
     for(int i = 0; i < n; i++){
+        // tomb-e eltároljuk a hallgatok informéciót majd azt irasuk be a ptisekbe ha jó
         Hallgato h = tomb[i];
         lowercase(h.szak);
 

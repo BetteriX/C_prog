@@ -18,9 +18,7 @@ char* swapcase(const char* original){
                   new_string[i] = new_string[i];
             }
       }
-
       new_string[hossz] = '\0';
-
 
       return new_string;
 }
