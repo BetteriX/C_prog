@@ -65,5 +65,7 @@ int main(int argc, const char* argv[]){
 
     fill_with_food(hossz, foods);
 
+    
+
     return 0;
 }

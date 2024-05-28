@@ -31,8 +31,8 @@ int main(){
     bubble_sort(100, tomb);
 
     int n = 100;
-    int median = tomb[(n+1)/2];
-    double also_kvartilis = (double)tomb[(n+1)/4];
+    int median = tomb[(n-1)/2]; // Az n+1 helyet n-1 kell
+    double also_kvartilis = (double)tomb[(n-1)/4]; // Szintén itt is n-1 kell mert a megfelelő értéket adjam meg ezzel
 
     printf("medián: %d\n", median);
     printf("első kvartilis: %2.lf\n", also_kvartilis);
