@@ -51,17 +51,16 @@ int feltolt(const char* fname, const int n, Hallgato tomb[]){
     char* szak;
     while(fgets(sor, n, fp)!=NULL){
         sor[strlen(sor)-1]='\0';
-        p = strtok(sor,",");
-        nev = p;
-        p = strtok(NULL,",");
-        kor = atoi(p);
-        p = strtok(NULL,",");
-        szak = p;
-
         Hallgato h;
+
+        nev = strtok(sor,",");
         strcpy(h.nev, nev);
+
+        kor = atoi(strtok(NULL,","));
         h.kor = kor;
-        strcpy(h.szak,szak);
+
+        szak = strtok(NULL,",");
+        strcpy(h.szak, szak);
 
         tomb[index] = h;
 

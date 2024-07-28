@@ -5,7 +5,7 @@
 #define MAX 99
 
 int randint(int also, int felso){
-      return also + (rand() % (felso - also + 1));
+      return  also + (rand() % (felso - also + 1));
 }
 
 int matrix_min(int felso, int also,int matrix[felso][also]){

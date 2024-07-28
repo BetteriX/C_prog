@@ -37,7 +37,8 @@ float atlagol(int n, int tomb[]){
 
 int main(){
     int tomb[10] = {1,2,3,4,5,6,7,8,9,10};
-    int meret = 10;
+    int meret = sizeof(tomb)/sizeof(int);
+    printf("%d/%d=%d",sizeof(tomb),sizeof(int),meret);
 
     /*
     int sum = osszeg(meret, tomb);

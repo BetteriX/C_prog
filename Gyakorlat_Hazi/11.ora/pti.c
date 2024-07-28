@@ -12,7 +12,7 @@
 void sort_names(int n, char* name[]){
     for(int i = 0; i < n-1; i++){
         for(int j = i+1; j < n; j++){
-            if(strcmp(name[i], name[j])==1){ // 1 Ha nem egyeznek a betük ha pedig igen akkor 0
+            if(strcmp(name[i], name[j])>0){ // 1 Ha nem egyeznek a betük ha pedig igen akkor 0
                 char* tmp = name[i];
                 name[i] = name[j];
                 name[j] = tmp;
