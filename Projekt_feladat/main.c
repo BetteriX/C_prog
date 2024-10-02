@@ -76,7 +76,7 @@ void file_py(){
     } else {
         file = fopen(file_name, "w");
         if (file != NULL) {
-            fprintf(file, "print(\"Hello, World!\")\n");
+            fprintf(file, "#!/usr/bin/env python3\n\n\ndef main():\n\tpass\n\nif __name__ == \"__main__\":\n\tmain()\n");
             fclose(file);
         }
     }
@@ -145,7 +145,7 @@ int main(int argc, char* const argv[]){
                 return 0;
             }
             if(strcmp(argv[1], "py")==0){
-                printf("print(\"Hello, World!\")\n");
+                printf("#!/usr/bin/env python3\n\n\ndef main():\n\tpass\n\nif __name__ == \"__main__\":\n\tmain()\n");
 
                 return 0;
             }
